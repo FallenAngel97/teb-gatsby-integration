@@ -21,14 +21,24 @@ const config: GatsbyConfig = {
       "path": "./src/images/"
     },
     __key: "images"
-  }, {
+  },
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `teb`,
+				path: `${__dirname}/src/teb`,
+			},
+		},
+	{
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "pages",
       "path": "./src/pages/"
     },
     __key: "pages"
-  }]
+  },
+		`gatsby-transformer-remark`,
+	]
 };
 
 export default config;
